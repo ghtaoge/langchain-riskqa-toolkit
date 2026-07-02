@@ -6,12 +6,28 @@ dist/
 build/
 .eggs/
 *.egg
+
+# Environment
 .env
 .venv/
 venv/
-node_modules/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tools
 .ruff_cache/
 .pytest_cache/
 .mypy_cache/
+
+# Coverage
 *.cover
 htmlcov/
