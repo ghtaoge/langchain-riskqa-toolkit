@@ -1,0 +1,7 @@
+{
+  "order_id": "WO-demo-001",
+  "title": "产品质量问题反馈",
+  "description": "客户反馈购买的产品A在使用过程中出现异常，需要售后处理",
+  "customer_messages": ["产品使用一周后出现故障", "希望能尽快处理"],
+  "category_hint": "售后"
+}

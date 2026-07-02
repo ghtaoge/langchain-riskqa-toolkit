@@ -1,0 +1,11 @@
+{
+  "source_id": "call-demo-002",
+  "source_type": "call",
+  "violations": [
+    {"type": "misleading_claim", "description": "不当医疗效果承诺", "severity": "critical", "evidence": "保证治好", "position": [30, 50]},
+    {"type": "financial_promotion", "description": "金融收益承诺", "severity": "warning", "evidence": "返利", "position": [50, 65]},
+    {"type": "privacy_violation", "description": "要求提供身份证号", "severity": "critical", "evidence": "身份证号", "position": [65, 80]}
+  ],
+  "original_text": "客服在通话中做出不当保证，并要求客户提供身份证号",
+  "agent_info": {"agent_id": "A-demo-001", "department": "销售部", "role": "销售", "historical_violation_count": 1}
+}

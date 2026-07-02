@@ -1,0 +1,11 @@
+{
+  "call_id": "call-demo-002",
+  "duration_seconds": 120,
+  "fragments": [
+    {"speaker": "agent", "start_time": 0, "end_time": 15, "text": "喂喂喂，你有什么事？"},
+    {"speaker": "customer", "start_time": 15, "end_time": 30, "text": "我想问一下产品B的效果"},
+    {"speaker": "agent", "start_time": 30, "end_time": 50, "text": "我保证这个产品一定能治好你的问题，百分之百有效！还有返利，投资回报率很高！"},
+    {"speaker": "customer", "start_time": 50, "end_time": 65, "text": "真的吗？"},
+    {"speaker": "agent", "start_time": 65, "end_time": 80, "text": "绝对真的，你把身份证号告诉我，我帮你办理。"}
+  ]
+}

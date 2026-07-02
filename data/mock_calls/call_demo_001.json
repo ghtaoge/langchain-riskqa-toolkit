@@ -1,0 +1,15 @@
+{
+  "call_id": "call-demo-001",
+  "duration_seconds": 180,
+  "fragments": [
+    {"speaker": "agent", "start_time": 0, "end_time": 15, "text": "您好，感谢您致电客户服务中心，我是客服张先生，请问有什么可以帮您？"},
+    {"speaker": "customer", "start_time": 15, "end_time": 30, "text": "我想了解一下你们的产品A，效果怎么样？"},
+    {"speaker": "agent", "start_time": 30, "end_time": 50, "text": "产品A是我们公司的主打产品，采用先进技术，质量可靠。如果您有具体问题，我可以详细解答。"},
+    {"speaker": "customer", "start_time": 50, "end_time": 65, "text": "用这个产品能治好我的问题吗？"},
+    {"speaker": "agent", "start_time": 65, "end_time": 85, "text": "这个需要根据您的具体情况来判断，建议您先咨询专业医生。我们不能做出绝对的保证。"},
+    {"speaker": "customer", "start_time": 85, "end_time": 100, "text": "好吧，那价格是多少？"},
+    {"speaker": "agent", "start_time": 100, "end_time": 120, "text": "产品A的市场参考价格为每盒298元，具体价格可能因渠道不同略有差异。您可以在我们的官方渠道查看最新价格。"},
+    {"speaker": "customer", "start_time": 120, "end_time": 135, "text": "谢谢，我再考虑一下。"},
+    {"speaker": "agent", "start_time": 135, "end_time": 150, "text": "好的，随时欢迎您咨询。祝您生活愉快！"}
+  ]
+}

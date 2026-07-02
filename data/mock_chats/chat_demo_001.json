@@ -1,0 +1,9 @@
+{
+  "session_id": "chat-demo-001",
+  "messages": [
+    {"sender": "customer", "timestamp": "2026-01-15T10:00:00", "content": "你好，我想咨询产品A的使用方法"},
+    {"sender": "agent", "timestamp": "2026-01-15T10:00:30", "content": "您好！产品A的使用方法如下：每日一次，按照说明书操作即可。如有疑问随时联系我们。"},
+    {"sender": "customer", "timestamp": "2026-01-15T10:01:00", "content": "谢谢，很清楚"},
+    {"sender": "agent", "timestamp": "2026-01-15T10:01:15", "content": "不客气，祝您使用愉快！"}
+  ]
+}
