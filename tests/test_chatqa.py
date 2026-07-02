@@ -2,11 +2,10 @@
 
 from datetime import datetime
 
-from riskqa.config import RiskQAConfig
-from riskqa.core.schemas import ChatMessage, ChatSession, RiskLevel
 from riskqa.chatqa.chains import ChatQAChain
 from riskqa.chatqa.rules import ChatRuleEngine
-
+from riskqa.config import RiskQAConfig
+from riskqa.core.schemas import ChatMessage, ChatSession, RiskLevel
 from tests.conftest import make_fake_llm
 
 

@@ -5,10 +5,10 @@ import re
 from langchain_core.output_parsers import StrOutputParser
 
 from riskqa.config import RiskQAConfig
-from riskqa.core.schemas import TicketQAReport, WorkOrder, RiskLevel, UrgencyLevel, SeverityLevel
+from riskqa.core.schemas import RiskLevel, SeverityLevel, TicketQAReport, UrgencyLevel, WorkOrder
 from riskqa.core.scoring import ScoreAggregator
-from riskqa.ticketqa.rules import TicketRuleEngine
 from riskqa.ticketqa.prompts import CLASSIFY_PROMPT, RISK_ASSESS_PROMPT, SUGGEST_PROMPT
+from riskqa.ticketqa.rules import TicketRuleEngine
 
 
 class TicketQAChain:

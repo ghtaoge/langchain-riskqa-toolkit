@@ -1,27 +1,27 @@
 """Shared data schemas for all riskqa modules."""
 
 from datetime import datetime
-from enum import Enum
+from enum import StrEnum
 from typing import Literal
 
 from pydantic import BaseModel
 
 
-class SeverityLevel(str, Enum):
+class SeverityLevel(StrEnum):
     """Violation severity levels used across all modules."""
     info = "info"
     warning = "warning"
     critical = "critical"
 
 
-class RiskLevel(str, Enum):
+class RiskLevel(StrEnum):
     """Overall risk assessment level."""
     safe = "safe"
     warning = "warning"
     violation = "violation"
 
 
-class UrgencyLevel(str, Enum):
+class UrgencyLevel(StrEnum):
     """Work order urgency classification."""
     low = "low"
     medium = "medium"
@@ -29,7 +29,7 @@ class UrgencyLevel(str, Enum):
     urgent = "urgent"
 
 
-class ViolationDegree(str, Enum):
+class ViolationDegree(StrEnum):
     """Violation ticket severity degree."""
     minor = "minor"
     moderate = "moderate"

@@ -5,26 +5,19 @@ from datetime import datetime
 import pytest
 
 from riskqa.core.schemas import (
+    AgentInfo,
     CallFragment,
     CallQAReport,
     CallTranscript,
     ChatMessage,
     ChatSession,
-    ChatQAReport,
     PunishmentRule,
-    PunishmentSuggestion,
     RiskLevel,
-    Rule,
-    RuleMatch,
     SeverityLevel,
-    TicketQAReport,
-    UrgencyLevel,
     Violation,
     ViolationDegree,
     ViolationInput,
-    ViolationQAReport,
     WorkOrder,
-    AgentInfo,
 )
 
 
@@ -60,7 +53,9 @@ def test_call_fragment_valid():
 
 
 def test_call_fragment_invalid_speaker():
-    with pytest.raises(Exception):
+    from pydantic import ValidationError
+
+    with pytest.raises(ValidationError):
         CallFragment(speaker="unknown", start_time=0.0, end_time=10.0, text="Hello")
 
 

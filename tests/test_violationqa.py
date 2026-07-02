@@ -2,16 +2,14 @@
 
 from riskqa.config import RiskQAConfig
 from riskqa.core.schemas import (
-    ViolationInput,
-    Violation,
-    SeverityLevel,
-    ViolationDegree,
     AgentInfo,
-    RiskLevel,
+    SeverityLevel,
+    Violation,
+    ViolationDegree,
+    ViolationInput,
 )
 from riskqa.violationqa.chains import ViolationQAChain
 from riskqa.violationqa.rules import PunishmentRuleTable
-
 from tests.conftest import make_fake_llm
 
 

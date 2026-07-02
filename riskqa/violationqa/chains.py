@@ -1,20 +1,24 @@
 """Chain compositions for violation ticket processing."""
 
-import re
 import uuid
 
 from langchain_core.output_parsers import StrOutputParser
 
 from riskqa.config import RiskQAConfig
 from riskqa.core.schemas import (
-    ViolationInput,
-    ViolationQAReport,
-    ViolationDegree,
     PunishmentSuggestion,
     SeverityLevel,
+    ViolationDegree,
+    ViolationInput,
+    ViolationQAReport,
+)
+from riskqa.violationqa.prompts import (
+    AUDIT_ASSIST_PROMPT,
+    PUNISHMENT_PROMPT,
+    SEVERITY_PROMPT,
+    SUMMARIZE_PROMPT,
 )
 from riskqa.violationqa.rules import PunishmentRuleTable
-from riskqa.violationqa.prompts import SUMMARIZE_PROMPT, SEVERITY_PROMPT, PUNISHMENT_PROMPT, AUDIT_ASSIST_PROMPT
 
 
 class ViolationQAChain:
@@ -56,7 +60,7 @@ class ViolationQAChain:
 
         # Step 3: LLM punishment + rule table cross-check
         primary_type = input.violations[0].type if input.violations else "unknown"
-        rule_punishment = self.rule_table.get_punishment(primary_type, offense_count + 1)
+        _ = self.rule_table.get_punishment(primary_type, offense_count + 1)  # noqa: F841
         rules_text = self._format_rules()
 
         punishment_chain = PUNISHMENT_PROMPT | self.llm | StrOutputParser()

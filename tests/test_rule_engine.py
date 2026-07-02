@@ -1,7 +1,7 @@
 """Tests for the rule engine."""
 
-from riskqa.core.schemas import Rule, SeverityLevel, RuleMatch
 from riskqa.core.rule_engine import RuleEngine, default_rules
+from riskqa.core.schemas import Rule, SeverityLevel
 
 
 def test_single_keyword_rule():

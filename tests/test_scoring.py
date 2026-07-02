@@ -1,7 +1,7 @@
 """Tests for score aggregation utilities."""
 
 from riskqa.config import RiskQAConfig
-from riskqa.core.schemas import SeverityLevel, RiskLevel, RuleMatch, Rule
+from riskqa.core.schemas import RiskLevel, RuleMatch, SeverityLevel
 from riskqa.core.scoring import ScoreAggregator
 
 
@@ -27,7 +27,6 @@ def test_compute_risk_level_warning():
 
 def test_compute_risk_level_violation():
     aggregator = ScoreAggregator(RiskQAConfig())
-    from riskqa.core.schemas import Rule
     matches = [RuleMatch(rule_name="test", matched_text="test", position=(0, 1), severity=SeverityLevel.critical)]
     level = aggregator.compute_risk_level(50.0, rule_matches=matches)
     assert level == RiskLevel.violation

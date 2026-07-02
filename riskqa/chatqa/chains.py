@@ -4,11 +4,11 @@ import re
 
 from langchain_core.output_parsers import StrOutputParser
 
-from riskqa.config import RiskQAConfig
-from riskqa.core.schemas import ChatQAReport, ChatSession, RiskLevel, Violation, SeverityLevel
-from riskqa.core.scoring import ScoreAggregator
+from riskqa.chatqa.prompts import RESPONSE_QUALITY_PROMPT, SENSITIVE_PROMPT, TOPIC_EXTRACT_PROMPT
 from riskqa.chatqa.rules import ChatRuleEngine
-from riskqa.chatqa.prompts import TOPIC_EXTRACT_PROMPT, SENSITIVE_PROMPT, RESPONSE_QUALITY_PROMPT
+from riskqa.config import RiskQAConfig
+from riskqa.core.schemas import ChatQAReport, ChatSession, SeverityLevel, Violation
+from riskqa.core.scoring import ScoreAggregator
 
 
 class ChatQAChain:
@@ -49,7 +49,7 @@ class ChatQAChain:
         quality_chain = RESPONSE_QUALITY_PROMPT | self.llm | StrOutputParser()
 
         topics_result = topic_chain.invoke({"chat_text": chat_text})
-        sensitive_result = sensitive_chain.invoke({"chat_text": chat_text})
+        _ = sensitive_chain.invoke({"chat_text": chat_text})  # noqa: F841
         quality_result = quality_chain.invoke({"chat_text": chat_text})
 
         # Step 3: Parse results

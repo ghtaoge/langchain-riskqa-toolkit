@@ -1,7 +1,7 @@
 """Call-specific compliance rules."""
 
-from riskqa.core.schemas import Rule, SeverityLevel
 from riskqa.core.rule_engine import RuleEngine
+from riskqa.core.schemas import Rule, SeverityLevel
 
 
 class CallRuleEngine(RuleEngine):

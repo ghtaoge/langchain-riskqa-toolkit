@@ -1,14 +1,17 @@
 """Chain compositions for call quality inspection."""
 
-from riskqa.config import RiskQAConfig
-from riskqa.core.schemas import CallQAReport, CallTranscript, RiskLevel, Violation, SeverityLevel
-from riskqa.core.scoring import ScoreAggregator
-from riskqa.callqa.rules import CallRuleEngine
-from riskqa.callqa.prompts import COMPLIANCE_PROMPT, SENSITIVE_PROMPT, QUALITY_PROMPT, SUMMARY_PROMPT
-from riskqa.callqa.parsers import callqa_report_parser
+from langchain_core.output_parsers import StrOutputParser
 
-from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
-from langchain_core.runnables import RunnablePassthrough
+from riskqa.callqa.prompts import (
+    COMPLIANCE_PROMPT,
+    QUALITY_PROMPT,
+    SENSITIVE_PROMPT,
+    SUMMARY_PROMPT,
+)
+from riskqa.callqa.rules import CallRuleEngine
+from riskqa.config import RiskQAConfig
+from riskqa.core.schemas import CallQAReport, CallTranscript, SeverityLevel, Violation
+from riskqa.core.scoring import ScoreAggregator
 
 
 class CallQAChain:

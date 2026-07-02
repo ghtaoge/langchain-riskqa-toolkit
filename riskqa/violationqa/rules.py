@@ -1,6 +1,6 @@
 """Violation-specific rules including punishment rule table."""
 
-from riskqa.core.schemas import PunishmentRule, ViolationDegree, SeverityLevel
+from riskqa.core.schemas import PunishmentRule, ViolationDegree
 
 
 class PunishmentRuleTable:

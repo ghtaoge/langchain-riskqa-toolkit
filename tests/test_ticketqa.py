@@ -1,10 +1,9 @@
 """Tests for the ticketqa module."""
 
 from riskqa.config import RiskQAConfig
-from riskqa.core.schemas import WorkOrder, RiskLevel, UrgencyLevel
+from riskqa.core.schemas import RiskLevel, UrgencyLevel, WorkOrder
 from riskqa.ticketqa.chains import TicketQAChain
 from riskqa.ticketqa.rules import TicketRuleEngine
-
 from tests.conftest import make_fake_llm
 
 

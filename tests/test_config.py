@@ -36,8 +36,8 @@ def test_config_reads_env():
 
 
 def test_invalid_provider():
-    from pydantic import ValidationError
     import pytest
+    from pydantic import ValidationError
 
     with pytest.raises(ValidationError):
         RiskQAConfig(llm_provider="invalid_provider")

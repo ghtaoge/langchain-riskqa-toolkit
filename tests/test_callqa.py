@@ -1,10 +1,9 @@
 """Tests for the callqa module."""
 
-from riskqa.config import RiskQAConfig
-from riskqa.core.schemas import CallFragment, CallTranscript, RiskLevel, SeverityLevel
 from riskqa.callqa.chains import CallQAChain
 from riskqa.callqa.rules import CallRuleEngine
-
+from riskqa.config import RiskQAConfig
+from riskqa.core.schemas import CallFragment, CallTranscript, RiskLevel
 from tests.conftest import make_fake_llm
 
 

@@ -56,8 +56,8 @@ def test_from_json_file():
 
 def test_from_json_invalid():
     data = {"invalid": "data"}
-    from pydantic import ValidationError
     import pytest
+    from pydantic import ValidationError
 
     with pytest.raises(ValidationError):
         DataAdapter.from_json(data, CallTranscript)

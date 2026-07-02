@@ -2,14 +2,11 @@
 
 from pathlib import Path
 
+from riskqa.callqa.chains import CallQAChain
 from riskqa.config import RiskQAConfig
 from riskqa.core.adapters import DataAdapter
-from riskqa.core.schemas import CallTranscript, ChatSession, WorkOrder, ViolationInput, RiskLevel
-from riskqa.callqa.chains import CallQAChain
-from riskqa.chatqa.chains import ChatQAChain
-from riskqa.ticketqa.chains import TicketQAChain
+from riskqa.core.schemas import CallTranscript, ChatSession, RiskLevel, ViolationInput, WorkOrder
 from riskqa.violationqa.chains import ViolationQAChain
-
 from tests.conftest import make_fake_llm
 
 DATA_DIR = Path(__file__).parent.parent / "data"
