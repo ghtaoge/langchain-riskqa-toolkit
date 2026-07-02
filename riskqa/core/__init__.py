@@ -23,3 +23,5 @@ from riskqa.core.schemas import (
     WorkOrder,
 )
 from riskqa.core.rule_engine import RuleEngine, default_rules
+from riskqa.core.scoring import ScoreAggregator
+from riskqa.core.adapters import DataAdapter
